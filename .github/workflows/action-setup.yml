@@ -14,7 +14,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'  # Укажите нужную версию Node.js
+          node-version: '18'
           cache: 'npm'
 
       - name: Install dependencies
@@ -32,4 +32,4 @@ jobs:
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/node@v3
         env:
-          SNYK_TOKEN: ${{ f914b0ff-7aff-4640-a892-528266f650a4 }}
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
