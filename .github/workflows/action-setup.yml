@@ -1,18 +1,35 @@
 name: show-directory
 
-on: push
+on: 
+  push:
+
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-    steps: 
-        - uses: actions/checkout@v3
- 
-        - uses: actions/setup-node@v3
 
-        - run: make setup
-        
-        - run: make test
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-        - run: make lint
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # Укажите нужную версию Node.js
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run setup
+        run: make setup
+
+      - name: Run tests
+        run: make test
+
+      - name: Run lint
+        run: make lint
+
+      - name: Run Snyk to check for vulnerabilities
+        uses: snyk/actions/node@v3
+        env:
+          SNYK_TOKEN: ${{ f914b0ff-7aff-4640-a892-528266f650a4 }}
