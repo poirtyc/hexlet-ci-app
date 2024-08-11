@@ -21,9 +21,9 @@
     "supertest": "^6.2.4"
   },
   "dependencies": {
-    "@strapi/plugin-i18n": "4.2.3",
-    "@strapi/plugin-users-permissions": "4.2.3",
-    "@strapi/strapi": "4.2.3"
+    "@strapi/plugin-i18n": "4.11.7",
+    "@strapi/plugin-users-permissions": "4.24.2",
+    "@strapi/strapi": "4.25.3"
   },
   "author": {
     "name": "A Strapi developer"
