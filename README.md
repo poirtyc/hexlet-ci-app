@@ -1,3 +1,4 @@
+[![show-directory](https://github.com/poirtyc/hexlet-ci-app/actions/workflows/action-setup.yml/badge.svg)](https://github.com/poirtyc/hexlet-ci-app/actions/workflows/action-setup.yml)
 # Example app for CI Hexlet course
 
 Starting boilerplate of [Strapi](https://strapi.io/) application
